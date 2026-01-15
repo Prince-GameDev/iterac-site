@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact | ITERAC Solutions Pvt Ltd</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Contact ITERAC Solutions Pvt Ltd for IT services, partnerships and inquiries.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+  <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("YOUR_PUBLIC_KEY");
+    })();
+  </script>
+</head>
+<body>
+
+<nav>
+  <span class="logo">ITERAC</span>
+  <div class="menu-toggle">☰</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="pillars.html">Pillars</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="container" style="padding-top:120px;">
+  <h2>Contact Us</h2>
+
+  <div class="contact-banner">
+    <img src="assests/images/CONTACT_LOCATION_MAGE.png" alt="ITERAC Office Location">
+  </div>
+
+  <div class="contact-grid">
+
+    <div class="card">
+      <h3>Send us a message</h3>
+      <form onsubmit="sendMail(); return false;">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h3>Company Details</h3>
+      <p><strong>Company:</strong> ITERAC Solutions Pvt Ltd</p>
+      <p><strong>Email:</strong> contact@iterac.com</p>
+      <p><strong>Location:</strong> India</p>
+      <img src="assests/images/CONTACT_LOCATION_MAGE.png" alt="ITERAC Office Location" class="contact-image">
+    </div>
+
+  </div>
+
+  <div class="brand-footer">
+    <img src="assests/logo/LOGO CONCEPT.png" alt="ITERAC Logo">
+  </div>
+
+</section>
+
+<footer>
+  © 2026 ITERAC Solutions Pvt Ltd — All Rights Reserved.
+</footer>
+
+</body>
+</html>
+

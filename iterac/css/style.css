@@ -1,0 +1,367 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* Color System */
+:root {
+  --primary: #0D3BFF;
+  --secondary: #0A1A2F;
+  --accent: #00C6AE;
+  --light: #F5F7FA;
+  --dark: #1a1a1a;
+  --white: #ffffff;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  transition: all .3s ease;
+  background: transparent;
+}
+
+nav.scrolled {
+  background: var(--white);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+nav .logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+nav ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--white);
+  transition: .3s ease;
+}
+
+nav.scrolled ul li a {
+  color: var(--dark);
+}
+
+nav ul li a:hover {
+  color: var(--primary);
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  height: 90vh;
+  background: url('/iterac/assests/images/HERO_BANNER_IMAGE.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  padding: 0 20px;
+}
+
+
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  margin-top: 20px;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #0a2cc7;
+}
+
+/* Sections */
+section {
+  padding: 80px 0;
+}
+
+section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Cards */
+.card {
+  background: var(--white);
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  margin-bottom: 30px;
+  transition: .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Contact Form */
+form input, form textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form button {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: var(--secondary);
+  color: var(--white);
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* --------------- */
+/* index.html*/
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+
+/* -------------- */
+/* about.html*/
+
+.about-banner img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card img {
+  width: 100%;
+  max-width: 320px;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.mission-card, .vision-card {
+  text-align: center;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.team-member img {
+  width: 90%;
+  border-radius: 10px;
+}
+
+
+/* -----service.html---------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* --------------- */
+/* ---pillars.html--- */
+.pillars-graphic img {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: 0 auto 40px auto;
+}
+
+.pillars-desc {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.pillar-item {
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+/* --------------- */
+/* ---contact----- */
+.contact-banner img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.contact-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.brand-footer img {
+  height: 60px;
+  display: block;
+  margin: 25px auto 0 auto;
+  opacity: .9;
+}
+
+
+/* --------------- */
+
+/* Mobile Responsive */
+@media(max-width: 768px) {
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  nav ul.open {
+    display: flex;
+  }
+  nav.scrolled ul li a {
+    color: var(--dark);
+  }
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+  nav.scrolled .menu-toggle {
+    color: var(--dark);
+  }
+}
+@media(max-width: 480px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}

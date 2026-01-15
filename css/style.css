@@ -92,7 +92,7 @@ nav ul li a:hover {
 /* Hero */
 .hero {
   height: 90vh;
-  background: url('/assests/images/HERO_BANNER_IMAGE.png') center/cover no-repeat;
+  background: url('../assests/images/HERO_BANNER_IMAGE.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;

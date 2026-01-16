@@ -24,3 +24,6 @@ function sendMail() {
   .then(()=> alert("Message Sent Successfully!"))
   .catch(()=> alert("Failed to send message!"));
 }
+
+
+

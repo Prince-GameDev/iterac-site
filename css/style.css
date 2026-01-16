@@ -1,16 +1,19 @@
-/* Google Fonts */
+/* --------------------------------------------------
+   GOOGLE FONTS
+--------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap');
 
-/* Reset */
+
+/* --------------------------------------------------
+   RESET + BASE
+--------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Inter', sans-serif;
@@ -19,7 +22,10 @@ body {
   line-height: 1.6;
 }
 
-/* Color System */
+
+/* --------------------------------------------------
+   COLOR SYSTEM
+--------------------------------------------------- */
 :root {
   --primary: #0D3BFF;
   --secondary: #0A1A2F;
@@ -29,26 +35,53 @@ body {
   --white: #ffffff;
 }
 
-/* Container */
+
+/* --------------------------------------------------
+   GENERAL LAYOUT
+--------------------------------------------------- */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
 }
 
-/* Navbar */
+section {
+  padding: 80px 0;
+}
+
+section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+/* --------------------------------------------------
+   NAVBAR
+--------------------------------------------------- */
 nav {
   position: fixed;
   width: 100%;
   top: 0;
   padding: 20px 0;
+  align-items: center;
+  z-index: 999;
+  background: transparent;
+  transition: .3s ease;
+  
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 999;
-  transition: all .3s ease;
-  background: transparent;
 }
+
 
 nav.scrolled {
   background: var(--white);
@@ -56,14 +89,20 @@ nav.scrolled {
 }
 
 nav .logo {
-  font-size: 1.4rem;
+  font-size: 1.7rem; /* ~27px */
   font-weight: 700;
+  letter-spacing: -0.5px;
   color: var(--primary);
 }
 
+.logo {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+
 nav ul {
   display: flex;
-  gap: 24px;
+  gap: 28px;
   list-style: none;
 }
 
@@ -82,17 +121,20 @@ nav ul li a:hover {
   color: var(--primary);
 }
 
-/* Mobile Menu */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
 }
 
-/* Hero */
+
+/* --------------------------------------------------
+   HERO
+--------------------------------------------------- */
 .hero {
+  position: relative;
   height: 90vh;
-  background: url('../assests/images/HERO_BANNER_IMAGE.png') center/cover no-repeat;
+  background: url('../assests/images/homepage1.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,19 +143,43 @@ nav ul li a:hover {
   padding: 0 20px;
 }
 
-
 .hero h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 3rem;
   margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.35);
+  
 }
 
 .hero p {
   font-size: 1.2rem;
-  max-width: 650px;
+  max-width: 700px;
   margin: auto;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.35);
+
+
 }
 
+.hero-content {
+  z-index: 2;
+}
+
+.hero-tagline {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.95;
+  z-index: 2;
+  
+}
+
+
+
+/* --------------------------------------------------
+   BUTTONS
+--------------------------------------------------- */
 .btn {
   display: inline-block;
   padding: 12px 26px;
@@ -128,43 +194,51 @@ nav ul li a:hover {
 
 .btn:hover {
   background: #0a2cc7;
+  
 }
 
-/* Sections */
-section {
-  padding: 80px 0;
-}
 
-section h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* Cards */
+/* --------------------------------------------------
+   CARDS (GLOBAL)
+--------------------------------------------------- */
 .card {
-  background: var(--white);
-  padding: 28px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  background: #fff;
+  padding: 22px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   margin-bottom: 30px;
-  transition: .3s ease;
+  transition: transform .3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
 
-/* Services Grid */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+.card img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 12px;
 }
 
-/* Contact Form */
-form input, form textarea {
+
+/* --------------------------------------------------
+   SERVICES GRID (GLOBAL)
+--------------------------------------------------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+
+/* --------------------------------------------------
+   FORMS
+--------------------------------------------------- */
+form input,
+form textarea {
   width: 100%;
   padding: 14px;
   margin: 10px 0;
@@ -183,56 +257,18 @@ form button {
   cursor: pointer;
 }
 
-/* Footer */
-footer {
-  background: var(--secondary);
-  color: var(--white);
-  text-align: center;
-  padding: 20px 0;
-}
 
-/* --------------- */
-/* index.html*/
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.card img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
-
-
-/* -------------- */
-/* about.html*/
-
+/* --------------------------------------------------
+   ABOUT PAGE
+--------------------------------------------------- */
 .about-banner img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 20px;
 }
 
-.card img {
-  width: 100%;
-  max-width: 320px;
-  display: block;
-  margin: 0 auto 20px auto;
-}
-
-.mission-card, .vision-card {
+.mission-card,
+.vision-card {
   text-align: center;
 }
 
@@ -248,36 +284,9 @@ footer {
 }
 
 
-/* -----service.html---------- */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 20px;
-}
-
-.card {
-  background: #fff;
-  padding: 22px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform .3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-  margin-bottom: 12px;
-}
-
-/* --------------- */
-/* ---pillars.html--- */
+/* --------------------------------------------------
+   PILLARS PAGE
+--------------------------------------------------- */
 .pillars-graphic img {
   width: 100%;
   max-width: 900px;
@@ -299,8 +308,10 @@ footer {
   text-align: center;
 }
 
-/* --------------- */
-/* ---contact----- */
+
+/* --------------------------------------------------
+   CONTACT PAGE
+--------------------------------------------------- */
 .contact-banner img {
   width: 100%;
   border-radius: 10px;
@@ -311,7 +322,6 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 25px;
-  margin-top: 20px;
 }
 
 .contact-image {
@@ -328,9 +338,20 @@ footer {
 }
 
 
-/* --------------- */
+/* --------------------------------------------------
+   FOOTER
+--------------------------------------------------- */
+footer {
+  background: var(--secondary);
+  color: var(--white);
+  text-align: center;
+  padding: 20px 0;
+}
 
-/* Mobile Responsive */
+
+/* --------------------------------------------------
+   RESPONSIVE
+--------------------------------------------------- */
 @media(max-width: 768px) {
   nav ul {
     display: none;
@@ -343,25 +364,20 @@ footer {
     flex-direction: column;
     gap: 15px;
   }
-  nav ul.open {
-    display: flex;
-  }
-  nav.scrolled ul li a {
-    color: var(--dark);
-  }
-  .menu-toggle {
+
+  nav ul.open { display: flex; }
+
+  nav.scrolled ul li a { color: var(--dark); }
+
+  .menu-toggle { 
     display: block;
     color: white;
   }
-  nav.scrolled .menu-toggle {
-    color: var(--dark);
-  }
+
+  nav.scrolled .menu-toggle { color: var(--dark); }
 }
+
 @media(max-width: 480px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
+  .hero h1 { font-size: 2.2rem; }
+  .hero p { font-size: 1rem; }
 }
